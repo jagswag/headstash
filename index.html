@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fredericka+the+Great&display=swap">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <form>
+      <div class="center-rows">
+        <h1>W e e d &ensp; J a r !</h1>
+        <p>Do you ever get some SUPER FIRE (im sure you do) that you wish you remembered
+          the name & look from two weeks ago? I'd love to have a little weed journal full of
+          a historic archive of the dopest dopes ive ever smoked, and this is my solution.
+        </p>
+
+        <div class="flex_container">
+          <div class="flex__child">
+            <label for="buy_date">Date</label>
+            <input type="date" name="buy_date" class="c1" placeholder="03/15/2020" />
+          </div>
+          <div class="flex__child">
+            <label for="strain">Strain</label>
+            <input type="text" name="strazin" class="c1" placeholder="DosiDos" required />
+          </div>
+          <div class="flex__child">
+            <label for="weight">Weight</label>
+            <input type="text" name="weight" class="c1" placeholder="7" />
+          </div>
+        </div>
+
+        <label for="typeList">Type</label>
+        <select class="dropdown c1" name="typeList">
+          <option value="Sativa">Sativa</option>
+          <option value="Indica">Indica</option>
+          <option value="Hybrid">Hybrid</option>
+        </select>
+
+        <label for="Affects">Affects</label>
+        <textarea name="Affects" class="c1" cols="30" rows="10"></textarea>
+        <!--<br>
+        <br>
+        <label for="pic">Upload Fire</label>
+        <input type="file" name="pic" class="upload c1" accept="image/*" multiple />-->
+
+        <button type="submit" class="submit">Store</button>
+        <div id="dvcontainer" class="dvcontainer">
+
+        </div>
+      </div>
+    </form>
+
+
+
+    <script src="localstoragelogic_1.js"></script>
+  </main>
+</body>
+
+</html>

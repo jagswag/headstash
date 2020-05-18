@@ -1,0 +1,138 @@
+form{
+    text-align: center !important;
+}
+
+.center-rows{
+    max-width: 800px;
+    width: 80%;
+    margin: 0px auto;
+    padding: 20px 0;
+}
+
+
+h1{
+    font-family: 'Fredericka the Great', cursive;
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    line-height: 150%;
+    border-bottom: 1px solid purple;
+}
+
+p, textarea{
+    font-family: 'Amatic SC', cursive;
+}
+
+label{
+    display: block;
+}
+
+input{
+    width: 80%;
+    padding: 4px;
+    margin: 6px 0 12px 0;
+}
+
+input[type=text], input[type=date]{
+    border: 2px solid #8bc763;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.dropdown {
+    width: 80%;
+    padding: 16px 20px;
+    margin: 6px 0 12px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #8bc763;
+}
+
+textarea {
+    height: 150px;
+    width: 80%;
+    background-color: #f8f8f879;
+    resize: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #8bc763;
+    padding: 12px 20px;
+    font-size: medium;
+}
+
+.upload{
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+.submit{
+    background-color: #8bc763;
+    width: 80%;
+    padding: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.dvcontainer {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    border: 0px solid #4F7849;
+    text-align: center;
+    border-collapse: collapse;
+    max-width: 800px;
+    width: 80%;
+    margin: 0px auto;
+    padding: 20px 0;
+}
+
+.dvcontainer td, .dvcontainer th {
+    border: 1px solid #4F7849;
+    padding: 3px 2px;
+    margin: 0px auto;
+}
+
+.dvcontainer tbody td {
+    font-size: 15px;
+    font-weight: bold;
+    color: #4F7849;
+    margin: 0px auto;
+}
+
+.dvcontainer tr:nth-child(even) {
+    background: #CEE0CC;
+}
+
+.dvcontainer thead {
+    background: #4F7849;
+    background: -moz-linear-gradient(top, #7b9a76 0%, #60855b 66%, #4F7849 100%);
+    background: -webkit-linear-gradient(top, #7b9a76 0%, #60855b 66%, #4F7849 100%);
+    background: linear-gradient(to bottom, #7b9a76 0%, #60855b 66%, #4F7849 100%);
+    border-bottom: 1px solid #444444;
+    margin: 0px auto;
+}
+
+.dvcontainer thead th {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 1px solid #D0E4F5;
+    margin: 0px auto;
+}
+
+
+@media screen and (min-width:670px){
+    .flex_container{
+        display: flex;
+        padding: 0;
+        justify-content: center;
+    }
+    .flex__child{
+        padding: 2px;
+        width: 30%;
+    }
+}
