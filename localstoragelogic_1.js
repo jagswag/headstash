@@ -32,20 +32,24 @@
         loaddata: function () {
             var datacount = localStorage.length;
             if (datacount > 0) {
-                var render = "<table><thead>";
-                render += "<tr><th>Date</th><th>Strain</th><th>Weight</th><th>Type</th><th>Affects</th></tr>";
+                var render = ""
+                //var render = "<table><thead>";
+                //render += "<tr><th>Date</th><th>Strain</th><th>Weight</th><th>Type</th><th>Affects</th></tr>";
                 for (i = 0; i < datacount; i++) {
                     var key = localStorage.key(i);
                     var bud = localStorage.getItem(key);
                     var data = JSON.parse(bud);
-                    render += "<tr><td>" + data.Date + " </td>";
-                    render += "<td>" + data.Strain + "</td>";
-                    render += "<td>" + data.Weight + "</td>";
-                    render += "<td>" + data.Type + "</td>";
-                    render += "<td>" + data.Affects + "</td></tr>";
+                    render += "<div class='column'>";
+                    render += "<div class='card'>";
+                    render += "<h2 class='card-title'>" + data.Strain + "</h2>";
+                    render += "<strong>Type</strong><br/><p>" + data.Type + "</p>";
+                    render += "<strong>Weight</strong><br/><p>" + data.Weight + "</p>";
+                    render += "<strong>Purchase Date</strong><br/><p>" + data.Date + "</p>";
+                    render += "<strong>Affects</strong><br/><p>" + data.Affects + "</p>";
+                    render += "</div>";
+                    render += "</div>";
                 }
-                render += "</thead></table>";
-                dvcontainer.innerHTML = render;
+                cardbody.innerHTML = render;
             }
         },
 
@@ -82,4 +86,4 @@
 //What I was doing wrong
 // I was using  the myBud object as an array but treating it like an obejct
 // Javascript needs to load ALL html documents first, so need to include the eventlisteners AFTER everything has been loaded (inside .onload)
-//
+// Instead of looping through arrays in getellemt by class, you can get element by ID, and set variables containinig the values.
