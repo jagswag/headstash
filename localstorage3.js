@@ -107,4 +107,5 @@ window.onload = function () {
     //var submit = document.getElementsByClassName('submit');
     //submit[0].addEventListener('click', applogic.saveitem);
     fetchBuds();
+
 };
