@@ -101,3 +101,10 @@ function fetchBuds() {
             "</div>";
     }
 }
+
+window.onload = function () {
+    //Save object into the localstorage
+    //var submit = document.getElementsByClassName('submit');
+    //submit[0].addEventListener('click', applogic.saveitem);
+    fetchBuds();
+};
