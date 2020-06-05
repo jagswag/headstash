@@ -21,7 +21,7 @@
 
 <body>
   <main>
-    <form>
+    <form id="myForm">
       <div class="center-rows">
         <h1>W e e d &ensp; J a r !</h1>
         <p>Do you ever get some SUPER FIRE (im sure you do) that you wish you remembered
@@ -32,27 +32,42 @@
         <div class="flex_container">
           <div class="flex__child">
             <label for="buy_date">Date</label>
-            <input type="date" name="buy_date" class="c1" placeholder="03/15/2020" />
+            <input type="date" name="buy_date" class="c1" id="date" placeholder="03/15/2020" />
           </div>
+
           <div class="flex__child">
             <label for="strain">Strain</label>
-            <input type="text" name="strazin" class="c1" placeholder="DosiDos" required />
+            <input type="text" name="strain" id="strain" class="c1" placeholder="DosiDos" />
           </div>
           <div class="flex__child">
             <label for="weight">Weight</label>
-            <input type="text" name="weight" class="c1" placeholder="7" />
+            <input type="text" name="weight" id="weight" class="c1" placeholder="7" />
           </div>
         </div>
 
-        <label for="typeList">Type</label>
-        <select class="dropdown c1" name="typeList">
-          <option value="Sativa">Sativa</option>
-          <option value="Indica">Indica</option>
-          <option value="Hybrid">Hybrid</option>
-        </select>
+        <div class="flex_container">
+          <div class="flex__child">
+            <label for="typeList2">Form</label>
+            <select class="dropdown c1" id="form" name="typeList2">
+              <option value="Dabs">Dabs</option>
+              <option value="Oil Pen">Oil Pen</option>
+              <option value="Flower">Flower</option>
+              <option value="Edibles">Edibles</option>
+            </select>
+          </div>
+
+          <div class="flex__child">
+            <label for="typeList1">Type</label>
+            <select class="dropdown c1" id="type" name="typeList1">
+              <option value="Sativa">Sativa</option>
+              <option value="Indica">Indica</option>
+              <option value="Hybrid">Hybrid</option>
+            </select>
+          </div>
+        </div>
 
         <label for="Affects">Affects</label>
-        <textarea name="Affects" class="c1" cols="30" rows="10"></textarea>
+        <textarea name="Affects" class="c1" id="affects" cols="30" rows="10"></textarea>
         <!--<br>
         <br>
         <label for="pic">Upload Fire</label>
@@ -64,7 +79,8 @@
         </div>
       </div>
     </form>
-    <script src="localstoragelogic_1.js"></script>
+    <!--<script src="localstoragelogic_1.js"></script>-->
+    <script src="localstorage3.js"></script>
   </main>
 </body>
 

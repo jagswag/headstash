@@ -46,6 +46,7 @@
                     render += "<strong>Weight</strong><br/><p>" + data.Weight + "</p>";
                     render += "<strong>Purchase Date</strong><br/><p>" + data.Date + "</p>";
                     render += "<strong>Affects</strong><br/><p>" + data.Affects + "</p>";
+                    render += '<button type="submit" class="clear" id="btnclearstorage">Clear</button>'
                     render += "</div>";
                     render += "</div>";
                 }
@@ -61,7 +62,13 @@
                 }
             }
             applogic.loaddata();
-        }
+        }//,
+
+        //removecard: function (cardId) {
+        //    var cardElement = localStorage.key()
+        //    var cardElement = document.getElementById(cardId);
+        //    cardElement.parentNode.removeChild(cardElement);
+        //}
     };
 
 
@@ -69,9 +76,6 @@
     //var btnclear = document.getElementById('btnclear');
     //btnclear.addEventListener('click', applogic.clearuielements, false);
 
-    //Clear LocalStorage
-    //var btnclearstorage = document.getElementById('btnclearstorage');
-    //btnclearstorage.addEventListener('click', applogic.clearstorage, false);
 
     //On Load of window load data from local storage
     window.onload = function () {
