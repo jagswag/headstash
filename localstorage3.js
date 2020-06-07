@@ -1,5 +1,5 @@
 document.getElementById("myForm").addEventListener("submit", storeBud);
-
+document.getElementById("myForm").addEventListener("submit", clearui);
 
 function storeBud(e) {
     var lscount = localStorage.length
@@ -10,6 +10,8 @@ function storeBud(e) {
     //myBud.Id = inputs[0].value;
     var Strain = document.getElementById("strain").value;
     var Weight = document.getElementById("weight").value;
+    var Price = document.getElementById("price").value;
+    var Brand = document.getElementById("brand").value;
     var Form = document.getElementById("form").value;
     var Type = document.getElementById("type").value;
     var Affects = document.getElementById("affects").value;
@@ -18,6 +20,8 @@ function storeBud(e) {
         purchase_date: Date,
         strain: Strain,
         weight: Weight,
+        price: Price,
+        brand: Brand,
         form: Form,
         type: Type,
         affects: Affects
@@ -71,6 +75,8 @@ function fetchBuds() {
         var Date = myBuds[i].purchase_date;
         var Strain = myBuds[i].strain;
         var Weight = myBuds[i].weight;
+        var Price = myBuds[i].price;
+        var Brand = myBuds[i].brand;
         var Form = myBuds[i].form;
         var Type = myBuds[i].type;
         var Affects = myBuds[i].affects;
@@ -94,6 +100,8 @@ function fetchBuds() {
             "<strong>Form</strong><br/><p>" + Form + "</p>" +
             "<strong>Type</strong><br/><p>" + Type + "</p>" +
             "<strong>Weight</strong><br/><p>" + Weight + "</p>" +
+            "<strong>Price</strong><br/><p>" + Price + "</p>" +
+            "<strong>Brand</strong><br/><p>" + Brand + "</p>" +
             "<strong>Purchase Date</strong><br/><p>" + Date + "</p>" +
             "<strong>Affects</strong><br/><p>" + Affects + "</p>" +
             "<a onClick='deleteBud(\"" + Strain + "\")' class='btn btn-danger'  href='#'>Delete</a>" +
@@ -102,9 +110,19 @@ function fetchBuds() {
     }
 }
 
+function clearui() {
+    var inputs = document.getElementById("myForm")
+    for (var i = 1; i < inputs.length; i++) {
+        inputs[i].value = "";
+    }
+}
+
+//
 window.onload = function () {
     //Save object into the localstorage
-    //var submit = document.getElementsByClassName('submit');
-    //submit[0].addEventListener('click', applogic.saveitem);
+    //document.getElementById("myForm").addEventListener("submit", storeBud);
+    //Clear UI elements after submitting
+    //  var submit = document.getElementById('submit');
+    //submit.addEventListener('click', clearui);
     fetchBuds();
 };
